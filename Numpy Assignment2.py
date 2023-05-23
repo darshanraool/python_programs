@@ -9,8 +9,20 @@ dealer2=[[23,43,54,56,76,78],[23,43,54,56,67,86],[34,54,67,98,76,34],
 print(dealer1)
 print(dealer2)
 
-print("Dealer 1 Total Sales: ",np.sum(dealer1,axis=1))
-print("Dealer 2 Total Sales: ",np.sum(dealer2,axis=1))
+# Find yearwise sales of each item by both the dealers
+print("Year wise sales Dealer 1 : ",np.sum(dealer1,axis=0))
+print("Year wise sales Dealer 2 : ",np.sum(dealer2,axis=0))
 
-print("Dealer 1 Total Sales: ",np.sum(dealer1,axis=0))
-print("Dealer 2 Total Sales: ",np.sum(dealer2,axis=0))
+# Find yearwise sales of all items for each dealer
+print("yearwise sales of all items by dealer1: ",np.sum(dealer1,axis=1))
+print("yearwise sales of all items by dealer2: ",np.sum(dealer2,axis=1))
+
+# Display sales of a particular year for each dealer
+print("sales of a particular year of dealer1: ",np.sum(dealer1,axis=1))
+print("sales of a particular year of dealer2: ",np.sum(dealer2,axis=1))
+
+# Display sales of TV and freeze for each dealer
+tvfridge1=np.sum(dealer1,axis=0)
+print("sales of TV and freeze of dealer1: ",tvfridge1[0:2])
+tvfridge2=np.sum(dealer2,axis=0)
+print("sales of TV and freeze of dealer1: ",tvfridge2[0:2])
